@@ -39,8 +39,6 @@ class Solution {
 
             for (int i = 0; i < 4; i++) {
                 char org = arr[i];
-
-     
                 arr[i] = (char) ('0' + (org - '0' + 1) % 10);
                 String next = new String(arr);
 
