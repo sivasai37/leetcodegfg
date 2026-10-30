@@ -39,11 +39,6 @@ class Solution {
             int count = curr[1];
             int d = curr[2];
 
-            // Ignore outdated states
-            if (d != dist[u][count]) {
-                continue;
-            }
-
             // Destination reached
             if (u == n - 1) {
                 return d;
@@ -69,12 +64,9 @@ class Solution {
                 }
 
                 int newDist = d + wt;
-
                 // Relaxation
                 if (newDist < dist[v][newCount]) {
-
                     dist[v][newCount] = newDist;
-
                     pq.offer(new int[]{
                         v, newCount, newDist
                     });
