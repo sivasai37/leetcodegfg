@@ -4,8 +4,8 @@ class Solution {
         
         for (int i = 0; i < nums.length; i++) {
             int product = 1;
-            int lcm = nums[i];
-            int gcd = nums[i];
+            int lcm = 1;
+            int gcd = 0;
             
             for (int j = i; j < nums.length; j++) {
                 product *= nums[j];
