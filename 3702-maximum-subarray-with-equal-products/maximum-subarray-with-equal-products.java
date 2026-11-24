@@ -10,7 +10,7 @@ class Solution {
             for (int j = i; j < nums.length; j++) {
                 product *= nums[j];
                 gcd = gcd(gcd, nums[j]);
-                lcm = (lcm / gcd(lcm, nums[j])) * nums[j];
+                lcm = (lcm * nums[j]) / gcd(lcm, nums[j]);
                 
                 // Check if the subarray satisfies the condition
                 if (product == gcd * lcm) {
